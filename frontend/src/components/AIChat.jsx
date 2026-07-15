@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updateInteraction } from "../redux/interactionSlice";
 import api from "../services/api";
 import "../styles/AIChat.css";
@@ -9,6 +9,7 @@ const AIChat = () => {
   const [chat, setChat] = useState([]);
 
   const dispatch = useDispatch();
+  const interactionData = useSelector((state) => state.interaction);
 
   useEffect(() => {
     setChat([
@@ -33,8 +34,9 @@ const AIChat = () => {
 
     try {
       const response = await api.post("/agent/chat", {
-        message,
-      });
+      message,
+      interaction: interactionData,
+});
 
       const data = response.data;
 
