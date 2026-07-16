@@ -1,3 +1,10 @@
+## Live Demo
+
+Frontend:
+https://your-vercel-url.vercel.app
+
+Backend:
+https://your-render-url.onrender.com
 # AI-First CRM – HCP Interaction Module
 
 An AI-powered Customer Relationship Management application designed for pharmaceutical field representatives to log and manage interactions with Healthcare Professionals (HCPs) through both a structured form and a conversational AI assistant.
